@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VivaSegura" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/vs_blue_dark</item>
+        <item name="colorOnPrimary">@color/vs_white</item>
+        <item name="android:statusBarColor">@color/vs_blue_dark</item>
+        <item name="android:navigationBarColor">@color/vs_blue_dark</item>
+    </style>
+</resources>

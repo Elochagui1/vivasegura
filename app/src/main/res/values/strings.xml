@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VivaSeguraApp</string>
+    <string name="login_title">INICIAR SESIÓN</string>
+    <string name="username">USUARIO</string>
+    <string name="password">CLAVE</string>
+    <string name="login">INICIAR SESIÓN</string>
+    <string name="home_title">MENÚ PRINCIPAL</string>
+</resources>
