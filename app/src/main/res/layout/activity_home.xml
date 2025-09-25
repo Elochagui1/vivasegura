@@ -1,16 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/vs_white"
+    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/home_title"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:textSize="22sp"
-        android:textColor="@color/vs_black"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Encabezado -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/logo_app"
+                android:contentDescription="@string/app_name"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:text="@string/menu_title"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/vs_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Grid de opciones -->
+        <GridLayout
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- PREMIUM -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPremium"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="@string/menu_premium"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="@string/menu_premium_desc"
+                        android:textSize="13sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- PÁNICO -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPanico"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="@string/menu_panico"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="@string/menu_panico_desc"
+                        android:textSize="13sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- EDUCATIVO -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEducativo"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="@string/menu_educativo"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="@string/menu_educativo_desc"
+                        android:textSize="13sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- DENUNCIAS -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDenuncias"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="@string/menu_denuncias"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="@string/menu_denuncias_desc"
+                        android:textSize="13sp"
+                        android:textColor="@color/vs_black"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+        <!-- Separador flexible -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Botón Cerrar sesión -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            android:text="@string/logout"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

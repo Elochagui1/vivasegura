@@ -25,5 +25,23 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".ui.premium.PremiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.panico.PanicoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.educativo.EducativoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.denuncias.DenunciasActivity"
+            android:exported="false" />
+
     </application>
 </manifest>

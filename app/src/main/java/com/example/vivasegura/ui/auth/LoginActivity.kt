@@ -23,6 +23,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         vb = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(vb.root)
+        vb.btnGoRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
 
         // ⚠️ Obtén la DB de forma segura con applicationContext
         val db = DatabaseProvider.get(this)
@@ -35,6 +38,10 @@ class LoginActivity : AppCompatActivity() {
                 Snackbar.make(vb.root, "Completa usuario y clave", Snackbar.LENGTH_LONG).show()
                 return@setOnClickListener
             }
+            if (user.isEmpty() || pass.isEmpty()) {
+            Snackbar.make(vb.root, getString(com.example.vivasegura.R.string.fill_user_pass), Snackbar.LENGTH_LONG).show()
+            return@setOnClickListener
+             }
 
             vb.btnLogin.isEnabled = false
             lifecycleScope.launch(Dispatchers.IO) {
