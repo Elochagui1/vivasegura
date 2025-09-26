@@ -29,6 +29,18 @@
     <string name="menu_denuncias_desc">Crear y ver denuncias</string>
 
 
+    <string name="report_title">CARGAR DENUNCIA (ENLACES OFICIALES)</string>
+    <string name="report_subtitle">Serás redirigido a sitios externos de entidades oficiales.</string>
+
+    <string name="report_fiscalia">DENUNCIAR EN FISCALÍA</string>
+    <string name="report_fiscalia_desc">SICEC – Fiscalía General de la Nación</string>
+
+    <string name="report_policia">DENUNCIAR EN POLICÍA</string>
+    <string name="report_policia_desc">A Denunciar – Policía Nacional</string>
+
+    <string name="cannot_open_link">No se pudo abrir el enlace</string>
+
+
 
 
 </resources>
