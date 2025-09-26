@@ -38,7 +38,51 @@
     <string name="report_policia">DENUNCIAR EN POLICÍA</string>
     <string name="report_policia_desc">A Denunciar – Policía Nacional</string>
 
+
+
+    <string name="panic_title">BOTÓN DE PÁNICO</string>
+    <string name="panic_subtitle">Simulación: no se enviarán mensajes reales.</string>
+
+    <string name="panic_contacts_title">Contactos de emergencia</string>
+    <string name="panic_contacts_sample">Línea 123 • Mamá (3000000000) • Amigo (3200000000)</string>
+
+    <string name="panic_message_label">MENSAJE DE EMERGENCIA</string>
+    <string name="panic_message_hint">Ej: Estoy en una situación de emergencia. Por favor contáctame.</string>
+
+    <string name="panic_simulate">SIMULAR ALERTA</string>
+    <string name="panic_share">COMPARTIR MENSAJE</string>
+
+    <string name="panic_simulated_ok">Alerta simulada enviada a contactos</string>
+    <string name="panic_empty_message">Escribe un mensaje de emergencia</string>
+
+    <string name="panic_title_sending">Alerta en curso...</string>
+    <string name="panic_subtitle_sending">Enviando ubicación a contactos de emergencia</string>
+    <string name="panic_subtitle_sent">Ubicación enviada a contactos de emergencia</string>
+    <string name="panic_sent_toast">Alerta simulada enviada</string>
+
+
+
+    <string name="educativo_title">MÓDULO EDUCATIVO</string>
+    <string name="educativo_subtitle">Lecturas recomendadas</string>
     <string name="cannot_open_link">No se pudo abrir el enlace</string>
+
+
+    <string name="premium_title">MÓDULO PREMIUM</string>
+    <string name="premium_desc">Accede a servicios adicionales.</string>
+    <string name="premium_switch">ACTIVAR PREMIUM (SIMULACIÓN)</string>
+    <string name="premium_notice">Simulación: estos botones no conectan a un proveedor real.</string>
+
+    <string name="premium_btn_counsel">ASESORÍA PSICOLÓGICA EN LÍNEA</string>
+    <string name="premium_btn_chat">CHAT CON PSICOLOGÍA</string>
+    <string name="premium_enable_first">Activa Premium para usar este servicio</string>
+
+    <string name="premium_email_subject">Solicitud de asesoría psicológica — VivaSegura</string>
+    <string name="premium_email_body">Hola, necesito asesoría psicológica en línea (simulación).
+Usuario: %1$s
+Fecha/hora: %2$s</string>
+
+    <string name="premium_share_title">Selecciona app para chatear</string>
+    <string name="no_app_found">No hay aplicación para completar la acción</string>
 
 
 

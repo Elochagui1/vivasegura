@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="16dp"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:id="@+id/rootAlert"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/vs_alert_red"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:title="@string/menu_panico"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+    <!-- Icono tipo sirena con círculo blanco -->
     <TextView
-        android:text="@string/menu_panico_desc"
-        android:layout_marginTop="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:id="@+id/ivSiren"
+        android:background="@drawable/circle_white"
+        android:gravity="center"
+        android:text="🚨"
+        android:textSize="36sp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"/>
 
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="@string/panic_title_sending"
+        android:textColor="@color/vs_white"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:text="@string/panic_subtitle_sending"
+        android:textColor="@color/vs_white"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Loader -->
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminate="true"
+        android:layout_marginTop="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

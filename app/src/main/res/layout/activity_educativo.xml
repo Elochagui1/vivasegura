@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="16dp"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:background="@color/vs_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
-        android:title="@string/menu_educativo"
+        android:title="@string/educativo_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <!-- Banner -->
+
+
     <TextView
-        android:text="@string/menu_educativo_desc"
-        android:layout_marginTop="12dp"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvSubtitle"
+        android:text="@string/educativo_subtitle"
+        android:textSize="13sp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <!-- Aquí vamos a añadir tarjetas de links por código -->
+    <LinearLayout
+        android:id="@+id/containerLinks"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 </LinearLayout>

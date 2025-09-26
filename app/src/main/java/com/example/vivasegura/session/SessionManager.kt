@@ -15,13 +15,12 @@ class SessionManager(private val context: Context) {
     private object Keys {
         val LOGGED_IN: Preferences.Key<Boolean> = booleanPreferencesKey("logged_in")
         val USERNAME: Preferences.Key<String> = stringPreferencesKey("username")
+        val PREMIUM: Preferences.Key<Boolean> = booleanPreferencesKey("premium_enabled")
     }
 
-    val isLoggedIn: Flow<Boolean> =
-        context.dataStore.data.map { it[Keys.LOGGED_IN] ?: false }
-
-    val username: Flow<String> =
-        context.dataStore.data.map { it[Keys.USERNAME] ?: "" }
+    // Sesión
+    val isLoggedIn: Flow<Boolean> = context.dataStore.data.map { it[Keys.LOGGED_IN] ?: false }
+    val username: Flow<String> = context.dataStore.data.map { it[Keys.USERNAME] ?: "" }
 
     suspend fun saveLogin(username: String) {
         context.dataStore.edit {
@@ -34,6 +33,14 @@ class SessionManager(private val context: Context) {
         context.dataStore.edit {
             it[Keys.LOGGED_IN] = false
             it[Keys.USERNAME] = ""
+            // mantener premium como esté o desactivarlo:
+            it[Keys.PREMIUM] = false
         }
+    }
+
+    // Premium
+    val isPremium: Flow<Boolean> = context.dataStore.data.map { it[Keys.PREMIUM] ?: false }
+    suspend fun setPremium(enabled: Boolean) {
+        context.dataStore.edit { it[Keys.PREMIUM] = enabled }
     }
 }
